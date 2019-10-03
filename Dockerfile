@@ -1,11 +1,7 @@
-FROM ubuntu:trusty
-MAINTAINER Justin Menga <justin.menga@gmail.com>
+FROM ubuntu:xenial
 
 # Prevent dpkg errors
 ENV TERM=xterm-256color
-
-# Set mirrors to NZ
-# RUN sed -i "s/http:\/\/archive./http:\/\/nz.archive./g" /etc/apt/sources.list
 
 # Install Ansible
 RUN apt-get update -qy && \
